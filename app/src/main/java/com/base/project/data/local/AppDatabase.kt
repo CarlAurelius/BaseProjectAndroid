@@ -27,7 +27,7 @@ abstract class AppDatabase : RoomDatabase() {
             }
 
         private fun buildDatabase(appContext: Context) =
-            Room.databaseBuilder(appContext, AppDatabase::class.java, "tpc.db")
+            Room.databaseBuilder(appContext, AppDatabase::class.java, "sample.db")
                 .fallbackToDestructiveMigration()
                 .build()
     }

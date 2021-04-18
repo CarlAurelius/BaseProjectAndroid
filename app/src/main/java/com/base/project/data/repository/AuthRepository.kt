@@ -5,7 +5,7 @@ import com.base.project.data.remote.RemoteDataSource
 import javax.inject.Inject
 
 class AuthRepository @Inject constructor(
-    private val tpcRemoteDataSource: RemoteDataSource,
-    private val profileDao: SampleDao
+    private val remoteDataSource: RemoteDataSource,
+    private val sampleDao: SampleDao
 ) {
 }

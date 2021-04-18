@@ -36,13 +36,13 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideRemoteDataSource(tpcService: APIService) = RemoteDataSource(tpcService)
+    fun provideRemoteDataSource(apiService: APIService) = RemoteDataSource(apiService)
 
 
     @Singleton
     @Provides
-    fun providesAuthRepository(rds: RemoteDataSource, sampleDao: SampleDao) =
-        AuthRepository(rds, sampleDao)
+    fun providesAuthRepository(remoteDataSource: RemoteDataSource, sampleDao: SampleDao) =
+        AuthRepository(remoteDataSource, sampleDao)
 
 
 }
